@@ -25,9 +25,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14.17.3' # Version compatible avec votre projet Angular
-          
-      - name: Set NODE_OPTIONS to handle OpenSSL issue
+          node-version: '16'
+
+
+      - name: Set Node.js options
         run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
 
       # Installation des dépendances
