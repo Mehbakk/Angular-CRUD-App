@@ -28,9 +28,6 @@ jobs:
           node-version: '14'
 
 
-      - name: Set Node.js options
-        run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
-
       # Installation des dépendances
       - name: Install dependencies
         run: |
@@ -50,7 +47,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Utilisé pour les intégrations GitHub (ex. commentaires PR)
           action: "upload"
           app_location: "/" # Chemin du code source Angular
-          output_location: "dist/<nom-de-votre-app>" # Remplacez <nom-de-votre-app> par le nom réel de l'application
+          output_location: "dist/angular8-crud-demo" # Remplacez <nom-de-votre-app> par le nom réel de l'application
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
