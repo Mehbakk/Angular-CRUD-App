@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Employee } from '../models/employee.model';
 import {environment} from '../../environments/environment';
 import {ApiResponse} from '../models/api.response.model';
+import {HttpHeaders} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -21,9 +22,15 @@ export class EmployeeService {
     return this.http.get(this.baseUrl +'/api/employees/' + id);
   }
 
-  createEmployee(employee: Employee): Observable<ApiResponse> {
-    return this.http.post<ApiResponse>(this.baseUrl +'/api/employees', employee);
+  createEmployee(formData: FormData): Observable<any> {
+    return this.http.post<any>(this.baseUrl + '/api/employees', formData);  // No headers here
   }
+
+
+
+
+
+
 
   updateEmployee(id: number, employee: Employee): Observable<ApiResponse> {
     return this.http.put<ApiResponse>(this.baseUrl +'/api/employees/' + employee.id, employee);

@@ -2,6 +2,7 @@
 <table class="table">
   <thead>
   <tr>
+    <th>Photo</th>
     <th>Name</th>
     <th>Email</th>
     <th>Phone</th>
@@ -11,6 +12,15 @@
   </thead>
   <tbody>
   <tr *ngFor="let employee of employees">
+    <td>
+      <img
+        *ngIf="employee.imageUrl"
+        [src]="employee.imageUrl"
+        alt="Employee Photo"
+        width="50"
+        height="50"
+      />
+    </td>
     <td>{{ employee.name }}</td>
     <td>{{ employee.email }}</td>
     <td>{{ employee.phone }}</td>

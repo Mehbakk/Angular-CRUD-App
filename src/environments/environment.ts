@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://mehbak-back-api-a6c9gqgtebc8gadt.canadacentral-01.azurewebsites.net/'
-  // baseUrl: 'http://localhost:8080'
+/*  baseUrl: 'https://mehbak-back-api-a6c9gqgtebc8gadt.canadacentral-01.azurewebsites.net'*/
+  baseUrl: 'http://localhost:8080'
   // baseUrl: 'http://ip:30163'
 
 };

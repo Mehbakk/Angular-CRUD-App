@@ -2,6 +2,7 @@ export class Employee {
   id!: number;
   name!: string;
   email!: string;
-  phone!: number;
+  phone!: string;
   department!: string;
+  imageUrl!: string;
 }
